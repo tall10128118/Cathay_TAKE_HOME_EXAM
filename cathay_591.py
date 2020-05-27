@@ -137,10 +137,12 @@ def main(outputfile):
                     for j in gender_list:
                         if i == j:
                             counter = counter + 1   
-                if counter < 5 & counter > 0:
+                if counter == 2:
                    gender_result =  gender[:2]    
-                else:
+                elif counter == 5:
                    gender_result =  gender[:5]
+                else:
+                   gender_result = 'NULL'    
             #--------------------------------------------
             # car 過濾多餘資料  
                 car_list = '無平面式機械式停車位'
@@ -158,7 +160,7 @@ def main(outputfile):
                     car_result = '停車位'
             #--------------------------------------------
             # form 過濾多餘資料  
-                form_list = '5房4房3房2房1房幾廳幾衛有陽臺'
+                form_list = '5房4房3房2房1房幾廳幾衛樓中樓有陽臺'
                 form_result = ''
                 counter = 0
                 for i in form:
